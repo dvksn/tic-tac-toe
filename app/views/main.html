@@ -1,0 +1,68 @@
+      {{ welcometext }}
+         
+
+      <hr/>
+      <div style = "width :350px;float:left;height:350px" class = "well">
+        <div > 
+         <div id = "1" ng-drop="true" ng-drop-success="onDropCompletefinal($data,$event,1)" style = "height: 100px; width: 100px;float:left;border-bottom:black;border-bottom-style:double; border-right:black;border-right-style:double">
+
+             <img src = {{alldropped[1].location}} style = "width: 50px; height:50px; margin:25px"></img>
+          
+          </div>
+          <div id = "2" ng-drop="true" ng-drop-success="onDropCompletefinal($data,$event,2)" style = "height: 100px; width:100px;float:left;border-bottom:black;border-bottom-style:double;border-right:black;border-right-style:double">
+
+               <img src = {{alldropped[2].location}} style = "width: 50px; height:50px; margin:25px"></img>
+          
+          </div>
+          <div id = "3"  ng-drop="true" ng-drop-success="onDropCompletefinal($data,$event,3)" style = "height: 100px; width:100px;float:left;border-bottom:black;border-bottom-style:double">
+
+               <img src = {{alldropped[3].location}} style = "width: 50px; height:50px; margin:25px"></img>
+          </div>
+        </div>
+        <div>
+          <div id = "4" ng-drop="true" ng-drop-success="onDropCompletefinal($data,$event,4)" style = "height: 100px; width: 100px;float:left;border-bottom:black;border-bottom-style:double;border-right:black;border-right-style:double">
+
+               <img src = {{alldropped[4].location}} style = "width: 50px; height:50px; margin:25px"></img>
+          
+          </div>
+          <div id = "5"  ng-drop="true" ng-drop-success="onDropCompletefinal($data,$event,5)" style = "height: 100px; width:100px;float:left;border-bottom:black;border-bottom-style:double;border-right:black;border-right-style:double">
+
+              <img src = {{alldropped[5].location}} style = "width: 50px; height:50px; margin:25px"></img>
+          
+          </div>
+          <div id = "6" ng-drop="true" ng-drop-success="onDropCompletefinal($data,$event,6)" style = "height: 100px; width:100px;float:left;border-bottom:black;border-bottom-style:double">
+            <img src = {{alldropped[6].location}} style = "width: 50px; height:50px; margin:25px"></img>
+    
+          </div>
+        </div>
+        <div>
+          <div id = "7" ng-drop="true" ng-drop-success="onDropCompletefinal($data,$event,7)" style = "height: 100px; width:100px;float:left;border-right:black;border-right-style:double">
+          <img src = {{alldropped[7].location}} style = "width: 50px; height:50px; margin:25px"></img>       
+          </div>
+          <div id = "8" ng-drop="true" ng-drop-success="onDropCompletefinal($data,$event,8)" style = "height: 100px; width:100px;float:left;border-right:black;border-right-style:double">
+          <img src = {{alldropped[8].location}} style = "width: 50px; height:50px; margin:25px"></img>
+          
+          </div>
+          <div id = "9" ng-drop="true" ng-drop-success="onDropCompletefinal($data,$event,9)" style = "height: 100px; width:100px;float:left">
+          <img src = {{alldropped[9].location}} style = "width: 50px; height:50px; margin:25px"></img>          
+          </div>
+        </div>
+      </div>
+      <div style = "height: 300; width:300;float:left">
+       <div id = "outer_for_draggable" style ="margin: 115px" >
+            <div  ng-repeat="obj in draggableObjects" style ="float:left">
+                <div id = {{obj.name}} ng-drag="true" ng-drag-data="obj" data-allow-transform="true" style= "width: 50px">  
+                  <img src = {{obj.location}} style = "height: 50px"></img>
+                  
+               </div>
+            </div>
+          </div>
+          <div style = "height: 100px; width: 100px;float:left">
+         
+          </div>
+           <div style = "height: 100px; width: 100px;float:left">
+         
+          </div>
+                <button ng-click = "refreshall()" class = "btn-primary">again</button>
+
+      </div>
